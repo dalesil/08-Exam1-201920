@@ -115,9 +115,8 @@ def problem1(square, thickness, window):
     circle.fill_color = square.fill_color
     circle.outline_thickness = thickness
     circle.attach_to(window)
-    window.render()
-    pointx2 = square.center.x - radius
-    pointy2 = square.center.y - radius
+    pointx2 = square.center.x - 0.5 * diameter
+    pointy2 = square.center.y - 0.5 * diameter
     point1 = rg.Point(pointx2, pointy2)
     line = rg.Line(point, point1)
     line.color = square.outline_color

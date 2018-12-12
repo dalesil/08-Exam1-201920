@@ -173,6 +173,11 @@ def problem3a(r, s):
     #    **  that is DEFINED ABOVE.
     ###########################################################################
 
+    count = 0
+    for k in range(r, s + 1):
+        if sum_of_digits(k**3) & 2 == 1:
+            count = count + k
+    return count
 
 def run_test_problem3b():
     """ Tests the   problem3b   function. """
@@ -284,6 +289,10 @@ def problem3b(m, r):
     #          Tests have been written for you (above).
     ###########################################################################
 
+    total = 0
+    for k in range(m):
+        total = total + ((k+1)/((r+k)**k))
+    return total
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
