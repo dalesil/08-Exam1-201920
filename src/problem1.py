@@ -116,7 +116,14 @@ def problem1(square, thickness, window):
     circle.outline_thickness = thickness
     circle.attach_to(window)
     window.render()
-    
+    pointx2 = square.center.x - radius
+    pointy2 = square.center.y - radius
+    point1 = rg.Point(pointx2, pointy2)
+    line = rg.Line(point, point1)
+    line.color = square.outline_color
+    line.thickness = thickness
+    line.attach_to(window)
+    window.render()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
