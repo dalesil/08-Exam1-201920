@@ -108,17 +108,17 @@ def problem1(square, thickness, window):
     square.attach_to(window)
     pointx = square.center.x
     pointy = square.center.y
-    point = rg.Point(pointx, pointy)
     diameter = square.length_of_each_side
     radius = 0.5 * diameter
+    point = rg.Point(pointx, pointy)
     circle = rg.Circle(point, radius)
     circle.fill_color = square.fill_color
     circle.outline_thickness = thickness
     circle.attach_to(window)
-    pointx2 = square.center.x - 0.5 * diameter
-    pointy2 = square.center.y - 0.5 * diameter
-    point1 = rg.Point(pointx2, pointy2)
-    line = rg.Line(point, point1)
+    pointx2 = square.center.x - radius
+    pointy2 = square.center.y - radius
+    point2 = rg.Point(pointx2, pointy2)
+    line = rg.Line(point, point2)
     line.color = square.outline_color
     line.thickness = thickness
     line.attach_to(window)
